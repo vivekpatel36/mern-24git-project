@@ -1,0 +1,10 @@
+const router = require("express").Router();
+const ServiceController = require("../Controller/ServicesController");
+router.post("/service", ServiceController.createService);
+router.get("/service", ServiceController.getAllService);
+router.get("/service/:id", ServiceController.getServicebyId);
+router.put("/service/:id", ServiceController.upadteService);
+router.delete("/service/:id", ServiceController.deleteService);
+router.get("/service/provider/:id",ServiceController.getServiceByServiceproviderId);
+router.get("/filterService",ServiceController.filterServices);
+module.exports = router;
